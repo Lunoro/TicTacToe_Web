@@ -1,0 +1,68 @@
+@keyframes blink {
+    0% {
+        border-color: gray;
+    }
+
+    50% {
+        border-color: cyan;
+    }
+
+    100% {
+        border-color: gray;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: darkslategray;
+    color: white;
+    font-family: arial;
+    text-align: center;
+}
+
+#github_pic {
+    position: fixed;
+    top: 85%;
+    left: 93%;
+    margin: 0.5cm;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: left;
+    animation: rotate 4s infinite;
+    animation-play-state: paused;
+
+    &:hover {
+        animation-play-state: running;
+     }
+}
+
+button {
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    border: 5px solid gray;
+    animation: blink 4s infinite;
+
+    &:hover {
+        background-color: deepskyblue;
+    }
+}
+
+#table_div {
+    margin-top: 5%;
+}
+
+table,
+tr,
+th {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: auto;
+}
